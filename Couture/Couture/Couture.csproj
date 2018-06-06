@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAjoutTissu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAjoutTissu.Designer.cs">
+      <DependentUpon>frmAjoutTissu.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListeTissus.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +65,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAjoutTissu.resx">
+      <DependentUpon>frmAjoutTissu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmListeTissus.resx">
       <DependentUpon>frmListeTissus.cs</DependentUpon>
     </EmbeddedResource>
