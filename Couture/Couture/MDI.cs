@@ -21,5 +21,16 @@ namespace Couture
         {
 
         }
+
+        private void ajouterUnTissuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAjoutTissu frmAjout = new frmAjoutTissu();
+            // si on sort de la saisie par OK
+            if (frmAjout.ShowDialog() == DialogResult.OK)
+            {
+                // régénèrer l'affichage du dataGridView 
+
+            }
+        }
     }
 }

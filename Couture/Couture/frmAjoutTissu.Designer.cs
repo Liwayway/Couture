@@ -31,9 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAjoutTissu));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbxPrincipales = new System.Windows.Forms.GroupBox();
-            this.gbxOption = new System.Windows.Forms.GroupBox();
-            this.rbtnNon = new System.Windows.Forms.RadioButton();
-            this.rbtnOui = new System.Windows.Forms.RadioButton();
             this.chkLave = new System.Windows.Forms.CheckBox();
             this.txtPrix = new System.Windows.Forms.TextBox();
             this.lblPrix = new System.Windows.Forms.Label();
@@ -49,7 +46,6 @@
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.lblMetrage = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.lklblAvances = new System.Windows.Forms.LinkLabel();
             this.lblDensite = new System.Windows.Forms.Label();
             this.lblLaize = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -66,11 +62,12 @@
             this.lblMatiere = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.txtCommentaire = new System.Windows.Forms.TextBox();
-            this.lblCommentaire = new System.Windows.Forms.Label();
+            this.gbxCommentaire = new System.Windows.Forms.GroupBox();
+            this.lklblAvances = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbxPrincipales.SuspendLayout();
-            this.gbxOption.SuspendLayout();
             this.gbxAvances.SuspendLayout();
+            this.gbxCommentaire.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -84,13 +81,13 @@
             // 
             // gbxPrincipales
             // 
+            this.gbxPrincipales.Controls.Add(this.lklblAvances);
             this.gbxPrincipales.Controls.Add(this.rbtnTisse);
             this.gbxPrincipales.Controls.Add(this.rbtnMaille);
             this.gbxPrincipales.Controls.Add(this.comboBox1);
             this.gbxPrincipales.Controls.Add(this.lblLaize);
             this.gbxPrincipales.Controls.Add(this.textBox2);
             this.gbxPrincipales.Controls.Add(this.lblMetrage);
-            this.gbxPrincipales.Controls.Add(this.gbxOption);
             this.gbxPrincipales.Controls.Add(this.chkLave);
             this.gbxPrincipales.Controls.Add(this.txtPrix);
             this.gbxPrincipales.Controls.Add(this.lblPrix);
@@ -104,46 +101,10 @@
             this.gbxPrincipales.Controls.Add(this.lblNom);
             this.gbxPrincipales.Location = new System.Drawing.Point(12, 30);
             this.gbxPrincipales.Name = "gbxPrincipales";
-            this.gbxPrincipales.Size = new System.Drawing.Size(663, 360);
+            this.gbxPrincipales.Size = new System.Drawing.Size(663, 335);
             this.gbxPrincipales.TabIndex = 1;
             this.gbxPrincipales.TabStop = false;
             this.gbxPrincipales.Text = "Caractéristiques principales";
-            // 
-            // gbxOption
-            // 
-            this.gbxOption.Controls.Add(this.lklblAvances);
-            this.gbxOption.Controls.Add(this.rbtnNon);
-            this.gbxOption.Controls.Add(this.rbtnOui);
-            this.gbxOption.Location = new System.Drawing.Point(174, 281);
-            this.gbxOption.Name = "gbxOption";
-            this.gbxOption.Size = new System.Drawing.Size(394, 61);
-            this.gbxOption.TabIndex = 12;
-            this.gbxOption.TabStop = false;
-            this.gbxOption.Text = "Voulez-vous définir plus de caractéristiques ?";
-            this.gbxOption.Enter += new System.EventHandler(this.gbxOption_Enter);
-            // 
-            // rbtnNon
-            // 
-            this.rbtnNon.AutoSize = true;
-            this.rbtnNon.Location = new System.Drawing.Point(106, 31);
-            this.rbtnNon.Name = "rbtnNon";
-            this.rbtnNon.Size = new System.Drawing.Size(45, 17);
-            this.rbtnNon.TabIndex = 1;
-            this.rbtnNon.TabStop = true;
-            this.rbtnNon.Text = "Non";
-            this.rbtnNon.UseVisualStyleBackColor = true;
-            this.rbtnNon.CheckedChanged += new System.EventHandler(this.rbtnNon_CheckedChanged);
-            // 
-            // rbtnOui
-            // 
-            this.rbtnOui.AutoSize = true;
-            this.rbtnOui.Location = new System.Drawing.Point(31, 31);
-            this.rbtnOui.Name = "rbtnOui";
-            this.rbtnOui.Size = new System.Drawing.Size(41, 17);
-            this.rbtnOui.TabIndex = 0;
-            this.rbtnOui.TabStop = true;
-            this.rbtnOui.Text = "Oui";
-            this.rbtnOui.UseVisualStyleBackColor = true;
             // 
             // chkLave
             // 
@@ -232,7 +193,7 @@
             // 
             // btnAjoutProjet
             // 
-            this.btnAjoutProjet.Location = new System.Drawing.Point(407, 765);
+            this.btnAjoutProjet.Location = new System.Drawing.Point(358, 725);
             this.btnAjoutProjet.Name = "btnAjoutProjet";
             this.btnAjoutProjet.Size = new System.Drawing.Size(99, 40);
             this.btnAjoutProjet.TabIndex = 2;
@@ -241,7 +202,7 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(525, 765);
+            this.btnOK.Location = new System.Drawing.Point(465, 725);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(99, 40);
             this.btnOK.TabIndex = 3;
@@ -250,7 +211,7 @@
             // 
             // btnAnnuler
             // 
-            this.btnAnnuler.Location = new System.Drawing.Point(636, 765);
+            this.btnAnnuler.Location = new System.Drawing.Point(576, 725);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(99, 40);
             this.btnAnnuler.TabIndex = 4;
@@ -273,17 +234,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 14;
-            // 
-            // lklblAvances
-            // 
-            this.lklblAvances.AutoSize = true;
-            this.lklblAvances.Location = new System.Drawing.Point(205, 16);
-            this.lklblAvances.Name = "lklblAvances";
-            this.lklblAvances.Size = new System.Drawing.Size(173, 13);
-            this.lklblAvances.TabIndex = 15;
-            this.lklblAvances.TabStop = true;
-            this.lklblAvances.Text = "Ajout de caractéristiques avancées";
-            this.lklblAvances.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklblAvances_LinkClicked);
             // 
             // lblDensite
             // 
@@ -352,7 +302,7 @@
             this.gbxAvances.Controls.Add(this.lblMotif);
             this.gbxAvances.Controls.Add(this.txtDensite);
             this.gbxAvances.Controls.Add(this.lblDensite);
-            this.gbxAvances.Location = new System.Drawing.Point(12, 412);
+            this.gbxAvances.Location = new System.Drawing.Point(12, 543);
             this.gbxAvances.Name = "gbxAvances";
             this.gbxAvances.Size = new System.Drawing.Size(663, 164);
             this.gbxAvances.TabIndex = 7;
@@ -428,45 +378,58 @@
             // 
             // txtCommentaire
             // 
-            this.txtCommentaire.Location = new System.Drawing.Point(12, 630);
+            this.txtCommentaire.Location = new System.Drawing.Point(6, 19);
             this.txtCommentaire.Multiline = true;
             this.txtCommentaire.Name = "txtCommentaire";
-            this.txtCommentaire.Size = new System.Drawing.Size(663, 118);
+            this.txtCommentaire.Size = new System.Drawing.Size(651, 138);
             this.txtCommentaire.TabIndex = 8;
+            this.txtCommentaire.TextChanged += new System.EventHandler(this.txtCommentaire_TextChanged);
             // 
-            // lblCommentaire
+            // gbxCommentaire
             // 
-            this.lblCommentaire.AutoSize = true;
-            this.lblCommentaire.Location = new System.Drawing.Point(12, 614);
-            this.lblCommentaire.Name = "lblCommentaire";
-            this.lblCommentaire.Size = new System.Drawing.Size(74, 13);
-            this.lblCommentaire.TabIndex = 9;
-            this.lblCommentaire.Text = "Commentaire :";
+            this.gbxCommentaire.Controls.Add(this.txtCommentaire);
+            this.gbxCommentaire.Location = new System.Drawing.Point(12, 373);
+            this.gbxCommentaire.Name = "gbxCommentaire";
+            this.gbxCommentaire.Size = new System.Drawing.Size(663, 164);
+            this.gbxCommentaire.TabIndex = 9;
+            this.gbxCommentaire.TabStop = false;
+            this.gbxCommentaire.Text = "Commentaire";
+            this.gbxCommentaire.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // lklblAvances
+            // 
+            this.lklblAvances.AutoSize = true;
+            this.lklblAvances.Location = new System.Drawing.Point(171, 302);
+            this.lklblAvances.Name = "lklblAvances";
+            this.lklblAvances.Size = new System.Drawing.Size(160, 13);
+            this.lklblAvances.TabIndex = 15;
+            this.lklblAvances.TabStop = true;
+            this.lklblAvances.Text = "Ajouter plus  de caractéristiques ";
+            this.lklblAvances.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklblAvances_LinkClicked);
             // 
             // frmAjoutTissu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(747, 817);
-            this.Controls.Add(this.lblCommentaire);
-            this.Controls.Add(this.txtCommentaire);
-            this.Controls.Add(this.gbxAvances);
+            this.ClientSize = new System.Drawing.Size(688, 780);
+            this.Controls.Add(this.gbxCommentaire);
             this.Controls.Add(this.btnAnnuler);
-            this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnAjoutProjet);
+            this.Controls.Add(this.gbxAvances);
+            this.Controls.Add(this.btnOK);
             this.Controls.Add(this.gbxPrincipales);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAjoutTissu";
             this.Text = "Ajouter un tissu";
+            this.Load += new System.EventHandler(this.frmAjoutTissu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbxPrincipales.ResumeLayout(false);
             this.gbxPrincipales.PerformLayout();
-            this.gbxOption.ResumeLayout(false);
-            this.gbxOption.PerformLayout();
             this.gbxAvances.ResumeLayout(false);
             this.gbxAvances.PerformLayout();
+            this.gbxCommentaire.ResumeLayout(false);
+            this.gbxCommentaire.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -484,15 +447,11 @@
         private System.Windows.Forms.Label lblPrix;
         private System.Windows.Forms.ComboBox cbxCouleur;
         private System.Windows.Forms.Label lblCouleur;
-        private System.Windows.Forms.GroupBox gbxOption;
-        private System.Windows.Forms.RadioButton rbtnNon;
-        private System.Windows.Forms.RadioButton rbtnOui;
         private System.Windows.Forms.Button btnAjoutProjet;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnAnnuler;
         private System.Windows.Forms.Label lblMetrage;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.LinkLabel lklblAvances;
         private System.Windows.Forms.RadioButton rbtnTisse;
         private System.Windows.Forms.RadioButton rbtnMaille;
         private System.Windows.Forms.ComboBox comboBox1;
@@ -509,6 +468,7 @@
         private System.Windows.Forms.ComboBox cbxMotif;
         private System.Windows.Forms.Label lblMotif;
         private System.Windows.Forms.TextBox txtCommentaire;
-        private System.Windows.Forms.Label lblCommentaire;
+        private System.Windows.Forms.GroupBox gbxCommentaire;
+        private System.Windows.Forms.LinkLabel lklblAvances;
     }
 }

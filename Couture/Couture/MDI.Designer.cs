@@ -32,13 +32,13 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterUnTissuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterUnProjetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterUnTissuToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.affichageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listeDesTissusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listeDesProjetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listeDesPatronsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajouterUnProjetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajouterUnTissuToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,40 +69,7 @@
             this.ajouterUnTissuToolStripMenuItem.Name = "ajouterUnTissuToolStripMenuItem";
             this.ajouterUnTissuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ajouterUnTissuToolStripMenuItem.Text = "Ajouter un tissu";
-            // 
-            // affichageToolStripMenuItem
-            // 
-            this.affichageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listeDesTissusToolStripMenuItem,
-            this.listeDesProjetsToolStripMenuItem,
-            this.listeDesPatronsToolStripMenuItem});
-            this.affichageToolStripMenuItem.Name = "affichageToolStripMenuItem";
-            this.affichageToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.affichageToolStripMenuItem.Text = "Affichage";
-            // 
-            // aProposToolStripMenuItem
-            // 
-            this.aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
-            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.aProposToolStripMenuItem.Text = "A propos";
-            // 
-            // listeDesTissusToolStripMenuItem
-            // 
-            this.listeDesTissusToolStripMenuItem.Name = "listeDesTissusToolStripMenuItem";
-            this.listeDesTissusToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.listeDesTissusToolStripMenuItem.Text = "Liste des tissus";
-            // 
-            // listeDesProjetsToolStripMenuItem
-            // 
-            this.listeDesProjetsToolStripMenuItem.Name = "listeDesProjetsToolStripMenuItem";
-            this.listeDesProjetsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.listeDesProjetsToolStripMenuItem.Text = "Liste des projets";
-            // 
-            // listeDesPatronsToolStripMenuItem
-            // 
-            this.listeDesPatronsToolStripMenuItem.Name = "listeDesPatronsToolStripMenuItem";
-            this.listeDesPatronsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.listeDesPatronsToolStripMenuItem.Text = "Liste des patrons";
+            this.ajouterUnTissuToolStripMenuItem.Click += new System.EventHandler(this.ajouterUnTissuToolStripMenuItem_Click);
             // 
             // ajouterUnProjetToolStripMenuItem
             // 
@@ -115,6 +82,40 @@
             this.ajouterUnTissuToolStripMenuItem1.Name = "ajouterUnTissuToolStripMenuItem1";
             this.ajouterUnTissuToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.ajouterUnTissuToolStripMenuItem1.Text = "Ajouter un patron";
+            // 
+            // affichageToolStripMenuItem
+            // 
+            this.affichageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listeDesTissusToolStripMenuItem,
+            this.listeDesProjetsToolStripMenuItem,
+            this.listeDesPatronsToolStripMenuItem});
+            this.affichageToolStripMenuItem.Name = "affichageToolStripMenuItem";
+            this.affichageToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.affichageToolStripMenuItem.Text = "Affichage";
+            // 
+            // listeDesTissusToolStripMenuItem
+            // 
+            this.listeDesTissusToolStripMenuItem.Name = "listeDesTissusToolStripMenuItem";
+            this.listeDesTissusToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.listeDesTissusToolStripMenuItem.Text = "Liste des tissus";
+            // 
+            // listeDesProjetsToolStripMenuItem
+            // 
+            this.listeDesProjetsToolStripMenuItem.Name = "listeDesProjetsToolStripMenuItem";
+            this.listeDesProjetsToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.listeDesProjetsToolStripMenuItem.Text = "Liste des projets";
+            // 
+            // listeDesPatronsToolStripMenuItem
+            // 
+            this.listeDesPatronsToolStripMenuItem.Name = "listeDesPatronsToolStripMenuItem";
+            this.listeDesPatronsToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.listeDesPatronsToolStripMenuItem.Text = "Liste des patrons";
+            // 
+            // aProposToolStripMenuItem
+            // 
+            this.aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
+            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.aProposToolStripMenuItem.Text = "A propos";
             // 
             // frmMDI
             // 

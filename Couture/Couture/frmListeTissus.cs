@@ -24,7 +24,13 @@ namespace Couture
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            frmAjoutTissu frmAjout = new frmAjoutTissu();
+            // si on sort de la saisie par OK
+            if (frmAjout.ShowDialog() == DialogResult.OK)
+            {
+                // régénèrer l'affichage du dataGridView 
+                
+            }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
