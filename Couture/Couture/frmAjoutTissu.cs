@@ -51,7 +51,7 @@ namespace Couture
             gbxAvances.Visible = true;
             //Déplace les boutons et modifie la hauteur du form
             btnAnnuler.Location = new Point(576, 725);
-            btnAjoutProjet.Location = new Point(368, 725);
+            btnAjoutProjet.Location = new Point(354, 725);
             btnOK.Location = new Point(465, 725);
             this.Height = 819;
             gbxAvances.Location = new Point(12, 373);
@@ -71,7 +71,7 @@ namespace Couture
         private void frmAjoutTissu_Load(object sender, EventArgs e)
         {
             gbxAvances.Visible = false;
-            btnAjoutProjet.Location = new Point(358, 554);
+            btnAjoutProjet.Location = new Point(354,554);
             btnOK.Location = new Point(465, 554);
             btnAnnuler.Location = new Point(576, 554);
             this.Height = 650;

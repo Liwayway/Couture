@@ -411,6 +411,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(688, 780);
             this.Controls.Add(this.gbxCommentaire);
             this.Controls.Add(this.btnAnnuler);
