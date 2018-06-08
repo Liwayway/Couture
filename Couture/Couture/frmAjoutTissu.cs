@@ -26,5 +26,25 @@ namespace Couture
         {
 
         }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbxOption_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbtnNon_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lklblAvances_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }

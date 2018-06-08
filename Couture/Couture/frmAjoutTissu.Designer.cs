@@ -31,20 +31,46 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAjoutTissu));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbxPrincipales = new System.Windows.Forms.GroupBox();
-            this.lblNom = new System.Windows.Forms.Label();
-            this.txtNom = new System.Windows.Forms.TextBox();
-            this.lblProvenance = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblType = new System.Windows.Forms.Label();
-            this.chkMaille = new System.Windows.Forms.CheckBox();
-            this.chkTisse = new System.Windows.Forms.CheckBox();
-            this.lblCouleur = new System.Windows.Forms.Label();
-            this.cbxCouleur = new System.Windows.Forms.ComboBox();
-            this.lblPrix = new System.Windows.Forms.Label();
-            this.txtPrix = new System.Windows.Forms.TextBox();
+            this.gbxOption = new System.Windows.Forms.GroupBox();
+            this.rbtnNon = new System.Windows.Forms.RadioButton();
+            this.rbtnOui = new System.Windows.Forms.RadioButton();
             this.chkLave = new System.Windows.Forms.CheckBox();
+            this.txtPrix = new System.Windows.Forms.TextBox();
+            this.lblPrix = new System.Windows.Forms.Label();
+            this.cbxCouleur = new System.Windows.Forms.ComboBox();
+            this.lblCouleur = new System.Windows.Forms.Label();
+            this.lblType = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblProvenance = new System.Windows.Forms.Label();
+            this.txtNom = new System.Windows.Forms.TextBox();
+            this.lblNom = new System.Windows.Forms.Label();
+            this.btnAjoutProjet = new System.Windows.Forms.Button();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.btnAnnuler = new System.Windows.Forms.Button();
+            this.lblMetrage = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lklblAvances = new System.Windows.Forms.LinkLabel();
+            this.lblDensite = new System.Windows.Forms.Label();
+            this.lblLaize = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.rbtnMaille = new System.Windows.Forms.RadioButton();
+            this.rbtnTisse = new System.Windows.Forms.RadioButton();
+            this.txtDensite = new System.Windows.Forms.TextBox();
+            this.gbxAvances = new System.Windows.Forms.GroupBox();
+            this.lblMotif = new System.Windows.Forms.Label();
+            this.cbxMotif = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.lblCategorie = new System.Windows.Forms.Label();
+            this.lblElasticite = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.lblMatiere = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txtCommentaire = new System.Windows.Forms.TextBox();
+            this.lblCommentaire = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbxPrincipales.SuspendLayout();
+            this.gbxOption.SuspendLayout();
+            this.gbxAvances.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -58,14 +84,19 @@
             // 
             // gbxPrincipales
             // 
+            this.gbxPrincipales.Controls.Add(this.rbtnTisse);
+            this.gbxPrincipales.Controls.Add(this.rbtnMaille);
+            this.gbxPrincipales.Controls.Add(this.comboBox1);
+            this.gbxPrincipales.Controls.Add(this.lblLaize);
+            this.gbxPrincipales.Controls.Add(this.textBox2);
+            this.gbxPrincipales.Controls.Add(this.lblMetrage);
+            this.gbxPrincipales.Controls.Add(this.gbxOption);
             this.gbxPrincipales.Controls.Add(this.chkLave);
             this.gbxPrincipales.Controls.Add(this.txtPrix);
             this.gbxPrincipales.Controls.Add(this.lblPrix);
             this.gbxPrincipales.Controls.Add(this.cbxCouleur);
             this.gbxPrincipales.Controls.Add(this.pictureBox1);
             this.gbxPrincipales.Controls.Add(this.lblCouleur);
-            this.gbxPrincipales.Controls.Add(this.chkTisse);
-            this.gbxPrincipales.Controls.Add(this.chkMaille);
             this.gbxPrincipales.Controls.Add(this.lblType);
             this.gbxPrincipales.Controls.Add(this.textBox1);
             this.gbxPrincipales.Controls.Add(this.lblProvenance);
@@ -73,26 +104,105 @@
             this.gbxPrincipales.Controls.Add(this.lblNom);
             this.gbxPrincipales.Location = new System.Drawing.Point(12, 30);
             this.gbxPrincipales.Name = "gbxPrincipales";
-            this.gbxPrincipales.Size = new System.Drawing.Size(663, 261);
+            this.gbxPrincipales.Size = new System.Drawing.Size(663, 360);
             this.gbxPrincipales.TabIndex = 1;
             this.gbxPrincipales.TabStop = false;
             this.gbxPrincipales.Text = "Caractéristiques principales";
             // 
-            // lblNom
+            // gbxOption
             // 
-            this.lblNom.AutoSize = true;
-            this.lblNom.Location = new System.Drawing.Point(171, 33);
-            this.lblNom.Name = "lblNom";
-            this.lblNom.Size = new System.Drawing.Size(35, 13);
-            this.lblNom.TabIndex = 0;
-            this.lblNom.Text = "Nom :";
+            this.gbxOption.Controls.Add(this.lklblAvances);
+            this.gbxOption.Controls.Add(this.rbtnNon);
+            this.gbxOption.Controls.Add(this.rbtnOui);
+            this.gbxOption.Location = new System.Drawing.Point(174, 281);
+            this.gbxOption.Name = "gbxOption";
+            this.gbxOption.Size = new System.Drawing.Size(394, 61);
+            this.gbxOption.TabIndex = 12;
+            this.gbxOption.TabStop = false;
+            this.gbxOption.Text = "Voulez-vous définir plus de caractéristiques ?";
+            this.gbxOption.Enter += new System.EventHandler(this.gbxOption_Enter);
             // 
-            // txtNom
+            // rbtnNon
             // 
-            this.txtNom.Location = new System.Drawing.Point(241, 30);
-            this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(338, 20);
-            this.txtNom.TabIndex = 1;
+            this.rbtnNon.AutoSize = true;
+            this.rbtnNon.Location = new System.Drawing.Point(106, 31);
+            this.rbtnNon.Name = "rbtnNon";
+            this.rbtnNon.Size = new System.Drawing.Size(45, 17);
+            this.rbtnNon.TabIndex = 1;
+            this.rbtnNon.TabStop = true;
+            this.rbtnNon.Text = "Non";
+            this.rbtnNon.UseVisualStyleBackColor = true;
+            this.rbtnNon.CheckedChanged += new System.EventHandler(this.rbtnNon_CheckedChanged);
+            // 
+            // rbtnOui
+            // 
+            this.rbtnOui.AutoSize = true;
+            this.rbtnOui.Location = new System.Drawing.Point(31, 31);
+            this.rbtnOui.Name = "rbtnOui";
+            this.rbtnOui.Size = new System.Drawing.Size(41, 17);
+            this.rbtnOui.TabIndex = 0;
+            this.rbtnOui.TabStop = true;
+            this.rbtnOui.Text = "Oui";
+            this.rbtnOui.UseVisualStyleBackColor = true;
+            // 
+            // chkLave
+            // 
+            this.chkLave.AutoSize = true;
+            this.chkLave.Location = new System.Drawing.Point(174, 249);
+            this.chkLave.Name = "chkLave";
+            this.chkLave.Size = new System.Drawing.Size(236, 17);
+            this.chkLave.TabIndex = 11;
+            this.chkLave.Text = "Le tissu a été lavé une première fois (décati).";
+            this.chkLave.UseVisualStyleBackColor = true;
+            // 
+            // txtPrix
+            // 
+            this.txtPrix.Location = new System.Drawing.Point(280, 171);
+            this.txtPrix.Name = "txtPrix";
+            this.txtPrix.Size = new System.Drawing.Size(100, 20);
+            this.txtPrix.TabIndex = 10;
+            // 
+            // lblPrix
+            // 
+            this.lblPrix.AutoSize = true;
+            this.lblPrix.Location = new System.Drawing.Point(171, 174);
+            this.lblPrix.Name = "lblPrix";
+            this.lblPrix.Size = new System.Drawing.Size(74, 13);
+            this.lblPrix.TabIndex = 9;
+            this.lblPrix.Text = "Prix au mètre :";
+            // 
+            // cbxCouleur
+            // 
+            this.cbxCouleur.FormattingEnabled = true;
+            this.cbxCouleur.Location = new System.Drawing.Point(280, 136);
+            this.cbxCouleur.Name = "cbxCouleur";
+            this.cbxCouleur.Size = new System.Drawing.Size(121, 21);
+            this.cbxCouleur.TabIndex = 8;
+            // 
+            // lblCouleur
+            // 
+            this.lblCouleur.AutoSize = true;
+            this.lblCouleur.Location = new System.Drawing.Point(171, 139);
+            this.lblCouleur.Name = "lblCouleur";
+            this.lblCouleur.Size = new System.Drawing.Size(103, 13);
+            this.lblCouleur.TabIndex = 7;
+            this.lblCouleur.Text = "Couleur Dominante :";
+            // 
+            // lblType
+            // 
+            this.lblType.AutoSize = true;
+            this.lblType.Location = new System.Drawing.Point(171, 102);
+            this.lblType.Name = "lblType";
+            this.lblType.Size = new System.Drawing.Size(76, 13);
+            this.lblType.TabIndex = 4;
+            this.lblType.Text = "Type de tissu :";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(241, 60);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(338, 20);
+            this.textBox1.TabIndex = 3;
             // 
             // lblProvenance
             // 
@@ -104,91 +214,246 @@
             this.lblProvenance.Text = "Provenance :";
             this.lblProvenance.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // txtNom
             // 
-            this.textBox1.Location = new System.Drawing.Point(241, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(338, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtNom.Location = new System.Drawing.Point(241, 30);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(338, 20);
+            this.txtNom.TabIndex = 1;
             // 
-            // lblType
+            // lblNom
             // 
-            this.lblType.AutoSize = true;
-            this.lblType.Location = new System.Drawing.Point(171, 102);
-            this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(76, 13);
-            this.lblType.TabIndex = 4;
-            this.lblType.Text = "Type de tissu :";
+            this.lblNom.AutoSize = true;
+            this.lblNom.Location = new System.Drawing.Point(171, 33);
+            this.lblNom.Name = "lblNom";
+            this.lblNom.Size = new System.Drawing.Size(35, 13);
+            this.lblNom.TabIndex = 0;
+            this.lblNom.Text = "Nom :";
             // 
-            // chkMaille
+            // btnAjoutProjet
             // 
-            this.chkMaille.AutoSize = true;
-            this.chkMaille.Location = new System.Drawing.Point(286, 102);
-            this.chkMaille.Name = "chkMaille";
-            this.chkMaille.Size = new System.Drawing.Size(91, 17);
-            this.chkMaille.TabIndex = 5;
-            this.chkMaille.Text = "Maille (tricoté)";
-            this.chkMaille.UseVisualStyleBackColor = true;
-            this.chkMaille.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.btnAjoutProjet.Location = new System.Drawing.Point(407, 765);
+            this.btnAjoutProjet.Name = "btnAjoutProjet";
+            this.btnAjoutProjet.Size = new System.Drawing.Size(99, 40);
+            this.btnAjoutProjet.TabIndex = 2;
+            this.btnAjoutProjet.Text = "Ajouter un projet";
+            this.btnAjoutProjet.UseVisualStyleBackColor = true;
             // 
-            // chkTisse
+            // btnOK
             // 
-            this.chkTisse.AutoSize = true;
-            this.chkTisse.Location = new System.Drawing.Point(383, 102);
-            this.chkTisse.Name = "chkTisse";
-            this.chkTisse.Size = new System.Drawing.Size(51, 17);
-            this.chkTisse.TabIndex = 6;
-            this.chkTisse.Text = "Tissé";
-            this.chkTisse.UseVisualStyleBackColor = true;
+            this.btnOK.Location = new System.Drawing.Point(525, 765);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(99, 40);
+            this.btnOK.TabIndex = 3;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = true;
             // 
-            // lblCouleur
+            // btnAnnuler
             // 
-            this.lblCouleur.AutoSize = true;
-            this.lblCouleur.Location = new System.Drawing.Point(171, 139);
-            this.lblCouleur.Name = "lblCouleur";
-            this.lblCouleur.Size = new System.Drawing.Size(103, 13);
-            this.lblCouleur.TabIndex = 7;
-            this.lblCouleur.Text = "Couleur Dominante :";
+            this.btnAnnuler.Location = new System.Drawing.Point(636, 765);
+            this.btnAnnuler.Name = "btnAnnuler";
+            this.btnAnnuler.Size = new System.Drawing.Size(99, 40);
+            this.btnAnnuler.TabIndex = 4;
+            this.btnAnnuler.Text = "Annuler";
+            this.btnAnnuler.UseVisualStyleBackColor = true;
             // 
-            // cbxCouleur
+            // lblMetrage
             // 
-            this.cbxCouleur.FormattingEnabled = true;
-            this.cbxCouleur.Location = new System.Drawing.Point(280, 136);
-            this.cbxCouleur.Name = "cbxCouleur";
-            this.cbxCouleur.Size = new System.Drawing.Size(121, 21);
-            this.cbxCouleur.TabIndex = 8;
+            this.lblMetrage.AutoSize = true;
+            this.lblMetrage.Location = new System.Drawing.Point(410, 174);
+            this.lblMetrage.Name = "lblMetrage";
+            this.lblMetrage.Size = new System.Drawing.Size(52, 13);
+            this.lblMetrage.TabIndex = 13;
+            this.lblMetrage.Text = "Métrage :";
+            this.lblMetrage.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // lblPrix
+            // textBox2
             // 
-            this.lblPrix.AutoSize = true;
-            this.lblPrix.Location = new System.Drawing.Point(171, 174);
-            this.lblPrix.Name = "lblPrix";
-            this.lblPrix.Size = new System.Drawing.Size(74, 13);
-            this.lblPrix.TabIndex = 9;
-            this.lblPrix.Text = "Prix au mètre :";
+            this.textBox2.Location = new System.Drawing.Point(468, 171);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 14;
             // 
-            // txtPrix
+            // lklblAvances
             // 
-            this.txtPrix.Location = new System.Drawing.Point(280, 171);
-            this.txtPrix.Name = "txtPrix";
-            this.txtPrix.Size = new System.Drawing.Size(100, 20);
-            this.txtPrix.TabIndex = 10;
+            this.lklblAvances.AutoSize = true;
+            this.lklblAvances.Location = new System.Drawing.Point(205, 16);
+            this.lklblAvances.Name = "lklblAvances";
+            this.lklblAvances.Size = new System.Drawing.Size(173, 13);
+            this.lklblAvances.TabIndex = 15;
+            this.lklblAvances.TabStop = true;
+            this.lklblAvances.Text = "Ajout de caractéristiques avancées";
+            this.lklblAvances.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklblAvances_LinkClicked);
             // 
-            // chkLave
+            // lblDensite
             // 
-            this.chkLave.AutoSize = true;
-            this.chkLave.Location = new System.Drawing.Point(174, 213);
-            this.chkLave.Name = "chkLave";
-            this.chkLave.Size = new System.Drawing.Size(236, 17);
-            this.chkLave.TabIndex = 11;
-            this.chkLave.Text = "Le tissu a été lavé une première fois (décati).";
-            this.chkLave.UseVisualStyleBackColor = true;
+            this.lblDensite.AutoSize = true;
+            this.lblDensite.Location = new System.Drawing.Point(321, 69);
+            this.lblDensite.Name = "lblDensite";
+            this.lblDensite.Size = new System.Drawing.Size(49, 13);
+            this.lblDensite.TabIndex = 5;
+            this.lblDensite.Text = "Densité :";
+            // 
+            // lblLaize
+            // 
+            this.lblLaize.AutoSize = true;
+            this.lblLaize.Location = new System.Drawing.Point(171, 210);
+            this.lblLaize.Name = "lblLaize";
+            this.lblLaize.Size = new System.Drawing.Size(38, 13);
+            this.lblLaize.TabIndex = 15;
+            this.lblLaize.Text = "Laize :";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(215, 207);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 16;
+            // 
+            // rbtnMaille
+            // 
+            this.rbtnMaille.AutoSize = true;
+            this.rbtnMaille.Location = new System.Drawing.Point(280, 102);
+            this.rbtnMaille.Name = "rbtnMaille";
+            this.rbtnMaille.Size = new System.Drawing.Size(90, 17);
+            this.rbtnMaille.TabIndex = 17;
+            this.rbtnMaille.TabStop = true;
+            this.rbtnMaille.Text = "Maille (tricoté)";
+            this.rbtnMaille.UseVisualStyleBackColor = true;
+            // 
+            // rbtnTisse
+            // 
+            this.rbtnTisse.AutoSize = true;
+            this.rbtnTisse.Location = new System.Drawing.Point(395, 102);
+            this.rbtnTisse.Name = "rbtnTisse";
+            this.rbtnTisse.Size = new System.Drawing.Size(50, 17);
+            this.rbtnTisse.TabIndex = 18;
+            this.rbtnTisse.TabStop = true;
+            this.rbtnTisse.Text = "Tissé";
+            this.rbtnTisse.UseVisualStyleBackColor = true;
+            // 
+            // txtDensite
+            // 
+            this.txtDensite.Location = new System.Drawing.Point(382, 66);
+            this.txtDensite.Name = "txtDensite";
+            this.txtDensite.Size = new System.Drawing.Size(100, 20);
+            this.txtDensite.TabIndex = 6;
+            // 
+            // gbxAvances
+            // 
+            this.gbxAvances.Controls.Add(this.comboBox2);
+            this.gbxAvances.Controls.Add(this.lblMatiere);
+            this.gbxAvances.Controls.Add(this.textBox3);
+            this.gbxAvances.Controls.Add(this.lblElasticite);
+            this.gbxAvances.Controls.Add(this.lblCategorie);
+            this.gbxAvances.Controls.Add(this.comboBox3);
+            this.gbxAvances.Controls.Add(this.cbxMotif);
+            this.gbxAvances.Controls.Add(this.lblMotif);
+            this.gbxAvances.Controls.Add(this.txtDensite);
+            this.gbxAvances.Controls.Add(this.lblDensite);
+            this.gbxAvances.Location = new System.Drawing.Point(12, 412);
+            this.gbxAvances.Name = "gbxAvances";
+            this.gbxAvances.Size = new System.Drawing.Size(663, 164);
+            this.gbxAvances.TabIndex = 7;
+            this.gbxAvances.TabStop = false;
+            this.gbxAvances.Text = "Caractéristiques Avancées";
+            // 
+            // lblMotif
+            // 
+            this.lblMotif.AutoSize = true;
+            this.lblMotif.Location = new System.Drawing.Point(76, 69);
+            this.lblMotif.Name = "lblMotif";
+            this.lblMotif.Size = new System.Drawing.Size(39, 13);
+            this.lblMotif.TabIndex = 7;
+            this.lblMotif.Text = "Motif : ";
+            // 
+            // cbxMotif
+            // 
+            this.cbxMotif.FormattingEnabled = true;
+            this.cbxMotif.Location = new System.Drawing.Point(121, 66);
+            this.cbxMotif.Name = "cbxMotif";
+            this.cbxMotif.Size = new System.Drawing.Size(121, 21);
+            this.cbxMotif.TabIndex = 8;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(121, 104);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 21);
+            this.comboBox3.TabIndex = 9;
+            // 
+            // lblCategorie
+            // 
+            this.lblCategorie.AutoSize = true;
+            this.lblCategorie.Location = new System.Drawing.Point(54, 107);
+            this.lblCategorie.Name = "lblCategorie";
+            this.lblCategorie.Size = new System.Drawing.Size(61, 13);
+            this.lblCategorie.TabIndex = 10;
+            this.lblCategorie.Text = "Catégorie : ";
+            // 
+            // lblElasticite
+            // 
+            this.lblElasticite.AutoSize = true;
+            this.lblElasticite.Location = new System.Drawing.Point(315, 32);
+            this.lblElasticite.Name = "lblElasticite";
+            this.lblElasticite.Size = new System.Drawing.Size(55, 13);
+            this.lblElasticite.TabIndex = 11;
+            this.lblElasticite.Text = "Elasticité :";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(382, 29);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 12;
+            // 
+            // lblMatiere
+            // 
+            this.lblMatiere.AutoSize = true;
+            this.lblMatiere.Location = new System.Drawing.Point(19, 32);
+            this.lblMatiere.Name = "lblMatiere";
+            this.lblMatiere.Size = new System.Drawing.Size(96, 13);
+            this.lblMatiere.TabIndex = 13;
+            this.lblMatiere.Text = "Matière principale :";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(121, 29);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 14;
+            // 
+            // txtCommentaire
+            // 
+            this.txtCommentaire.Location = new System.Drawing.Point(12, 630);
+            this.txtCommentaire.Multiline = true;
+            this.txtCommentaire.Name = "txtCommentaire";
+            this.txtCommentaire.Size = new System.Drawing.Size(663, 118);
+            this.txtCommentaire.TabIndex = 8;
+            // 
+            // lblCommentaire
+            // 
+            this.lblCommentaire.AutoSize = true;
+            this.lblCommentaire.Location = new System.Drawing.Point(12, 614);
+            this.lblCommentaire.Name = "lblCommentaire";
+            this.lblCommentaire.Size = new System.Drawing.Size(74, 13);
+            this.lblCommentaire.TabIndex = 9;
+            this.lblCommentaire.Text = "Commentaire :";
             // 
             // frmAjoutTissu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(747, 450);
+            this.ClientSize = new System.Drawing.Size(747, 817);
+            this.Controls.Add(this.lblCommentaire);
+            this.Controls.Add(this.txtCommentaire);
+            this.Controls.Add(this.gbxAvances);
+            this.Controls.Add(this.btnAnnuler);
+            this.Controls.Add(this.btnOK);
+            this.Controls.Add(this.btnAjoutProjet);
             this.Controls.Add(this.gbxPrincipales);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAjoutTissu";
@@ -196,7 +461,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbxPrincipales.ResumeLayout(false);
             this.gbxPrincipales.PerformLayout();
+            this.gbxOption.ResumeLayout(false);
+            this.gbxOption.PerformLayout();
+            this.gbxAvances.ResumeLayout(false);
+            this.gbxAvances.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -209,12 +479,36 @@
         private System.Windows.Forms.Label lblNom;
         private System.Windows.Forms.Label lblType;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox chkMaille;
         private System.Windows.Forms.CheckBox chkLave;
         private System.Windows.Forms.TextBox txtPrix;
         private System.Windows.Forms.Label lblPrix;
         private System.Windows.Forms.ComboBox cbxCouleur;
         private System.Windows.Forms.Label lblCouleur;
-        private System.Windows.Forms.CheckBox chkTisse;
+        private System.Windows.Forms.GroupBox gbxOption;
+        private System.Windows.Forms.RadioButton rbtnNon;
+        private System.Windows.Forms.RadioButton rbtnOui;
+        private System.Windows.Forms.Button btnAjoutProjet;
+        private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.Button btnAnnuler;
+        private System.Windows.Forms.Label lblMetrage;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.LinkLabel lklblAvances;
+        private System.Windows.Forms.RadioButton rbtnTisse;
+        private System.Windows.Forms.RadioButton rbtnMaille;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lblLaize;
+        private System.Windows.Forms.Label lblDensite;
+        private System.Windows.Forms.TextBox txtDensite;
+        private System.Windows.Forms.GroupBox gbxAvances;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label lblMatiere;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label lblElasticite;
+        private System.Windows.Forms.Label lblCategorie;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbxMotif;
+        private System.Windows.Forms.Label lblMotif;
+        private System.Windows.Forms.TextBox txtCommentaire;
+        private System.Windows.Forms.Label lblCommentaire;
     }
 }
