@@ -51,6 +51,24 @@
     <Compile Include="frmAjoutTissu.Designer.cs">
       <DependentUpon>frmAjoutTissu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultationTissu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultationTissu.Designer.cs">
+      <DependentUpon>frmConsultationTissu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProjetParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProjetParent.Designer.cs">
+      <DependentUpon>frmProjetParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTissuParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTissuParent.Designer.cs">
+      <DependentUpon>frmTissuParent.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListeTissus.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +85,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAjoutTissu.resx">
       <DependentUpon>frmAjoutTissu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultationTissu.resx">
+      <DependentUpon>frmConsultationTissu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProjetParent.resx">
+      <DependentUpon>frmProjetParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTissuParent.resx">
+      <DependentUpon>frmTissuParent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListeTissus.resx">
       <DependentUpon>frmListeTissus.cs</DependentUpon>
@@ -94,7 +121,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

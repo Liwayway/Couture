@@ -34,6 +34,7 @@
             this.ajouterUnTissuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterUnProjetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterUnTissuToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultationTissuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.affichageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listeDesTissusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listeDesProjetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,7 +60,8 @@
             this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajouterUnTissuToolStripMenuItem,
             this.ajouterUnProjetToolStripMenuItem,
-            this.ajouterUnTissuToolStripMenuItem1});
+            this.ajouterUnTissuToolStripMenuItem1,
+            this.consultationTissuToolStripMenuItem});
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
             this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.fichierToolStripMenuItem.Text = "Fichier";
@@ -83,6 +85,13 @@
             this.ajouterUnTissuToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.ajouterUnTissuToolStripMenuItem1.Text = "Ajouter un patron";
             // 
+            // consultationTissuToolStripMenuItem
+            // 
+            this.consultationTissuToolStripMenuItem.Name = "consultationTissuToolStripMenuItem";
+            this.consultationTissuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultationTissuToolStripMenuItem.Text = "Consultation Tissu";
+            this.consultationTissuToolStripMenuItem.Click += new System.EventHandler(this.consultationTissuToolStripMenuItem_Click);
+            // 
             // affichageToolStripMenuItem
             // 
             this.affichageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -96,19 +105,21 @@
             // listeDesTissusToolStripMenuItem
             // 
             this.listeDesTissusToolStripMenuItem.Name = "listeDesTissusToolStripMenuItem";
-            this.listeDesTissusToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.listeDesTissusToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listeDesTissusToolStripMenuItem.Text = "Liste des tissus";
+            this.listeDesTissusToolStripMenuItem.Click += new System.EventHandler(this.listeDesTissusToolStripMenuItem_Click);
             // 
             // listeDesProjetsToolStripMenuItem
             // 
             this.listeDesProjetsToolStripMenuItem.Name = "listeDesProjetsToolStripMenuItem";
-            this.listeDesProjetsToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.listeDesProjetsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listeDesProjetsToolStripMenuItem.Text = "Liste des projets";
+            this.listeDesProjetsToolStripMenuItem.Click += new System.EventHandler(this.listeDesProjetsToolStripMenuItem_Click);
             // 
             // listeDesPatronsToolStripMenuItem
             // 
             this.listeDesPatronsToolStripMenuItem.Name = "listeDesPatronsToolStripMenuItem";
-            this.listeDesPatronsToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.listeDesPatronsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listeDesPatronsToolStripMenuItem.Text = "Liste des patrons";
             // 
             // aProposToolStripMenuItem
@@ -127,6 +138,7 @@
             this.IsMdiContainer = true;
             this.Name = "frmMDI";
             this.Text = "Ecole Chiffon Dort";
+            this.Load += new System.EventHandler(this.frmMDI_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -146,6 +158,7 @@
         private System.Windows.Forms.ToolStripMenuItem aProposToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterUnProjetToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterUnTissuToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem consultationTissuToolStripMenuItem;
     }
 }
 

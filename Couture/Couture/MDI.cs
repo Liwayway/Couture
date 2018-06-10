@@ -32,5 +32,28 @@ namespace Couture
 
             }
         }
+
+        private void listeDesTissusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListeTissus listeTissus = new frmListeTissus();
+            listeTissus.Show();
+
+        }
+
+        private void listeDesProjetsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void consultationTissuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultationTissu frmConsulter = new frmConsultationTissu();
+            frmConsulter.Show();
+        }
+
+        private void frmMDI_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

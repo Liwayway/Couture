@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace Couture
 {
-    public partial class frmAjoutTissu : Couture.frmTissuParent
+    public partial class frmConsultationTissu : Couture.frmTissuParent
     {
-        public frmAjoutTissu()
+        public frmConsultationTissu()
         {
             InitializeComponent();
         }
