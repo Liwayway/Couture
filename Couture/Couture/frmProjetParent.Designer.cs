@@ -53,9 +53,9 @@
             this.lblGalerie = new System.Windows.Forms.Label();
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAjoutPhoto = new System.Windows.Forms.Button();
+            this.btnAjoutPatron = new System.Windows.Forms.Button();
+            this.btnAjoutTissu = new System.Windows.Forms.Button();
             this.tbpGalerie.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tbcProjet.SuspendLayout();
@@ -303,6 +303,7 @@
             // 
             // btnAnnuler
             // 
+            this.btnAnnuler.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnAnnuler.Location = new System.Drawing.Point(711, 577);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(75, 23);
@@ -319,41 +320,43 @@
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnAjoutPhoto
             // 
-            this.button1.Location = new System.Drawing.Point(426, 577);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(198, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Ajouter une photo  du projet terminé";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAjoutPhoto.Location = new System.Drawing.Point(426, 577);
+            this.btnAjoutPhoto.Name = "btnAjoutPhoto";
+            this.btnAjoutPhoto.Size = new System.Drawing.Size(198, 23);
+            this.btnAjoutPhoto.TabIndex = 3;
+            this.btnAjoutPhoto.Text = "Ajouter une photo  du projet terminé";
+            this.btnAjoutPhoto.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnAjoutPatron
             // 
-            this.button2.Location = new System.Drawing.Point(300, 577);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Associer un patron";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAjoutPatron.Location = new System.Drawing.Point(300, 577);
+            this.btnAjoutPatron.Name = "btnAjoutPatron";
+            this.btnAjoutPatron.Size = new System.Drawing.Size(120, 23);
+            this.btnAjoutPatron.TabIndex = 4;
+            this.btnAjoutPatron.Text = "Associer un patron";
+            this.btnAjoutPatron.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnAjoutTissu
             // 
-            this.button3.Location = new System.Drawing.Point(192, 577);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 23);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Associer un tissu";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAjoutTissu.Location = new System.Drawing.Point(192, 577);
+            this.btnAjoutTissu.Name = "btnAjoutTissu";
+            this.btnAjoutTissu.Size = new System.Drawing.Size(102, 23);
+            this.btnAjoutTissu.TabIndex = 5;
+            this.btnAjoutTissu.Text = "Associer un tissu";
+            this.btnAjoutTissu.UseVisualStyleBackColor = true;
             // 
             // frmProjetParent
             // 
+            this.AcceptButton = this.btnOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnAnnuler;
             this.ClientSize = new System.Drawing.Size(800, 625);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAjoutTissu);
+            this.Controls.Add(this.btnAjoutPatron);
+            this.Controls.Add(this.btnAjoutPhoto);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.tbcProjet);
@@ -395,8 +398,8 @@
         protected System.Windows.Forms.Label lblGalerie;
         protected System.Windows.Forms.Button btnAnnuler;
         protected System.Windows.Forms.Button btnOK;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAjoutPhoto;
+        private System.Windows.Forms.Button btnAjoutPatron;
+        private System.Windows.Forms.Button btnAjoutTissu;
     }
 }

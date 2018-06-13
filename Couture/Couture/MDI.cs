@@ -55,5 +55,17 @@ namespace Couture
         {
 
         }
+
+        private void ajouterUnProjetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAjoutProjet frmAjouterUnProjet = new frmAjoutProjet();
+            if (frmAjouterUnProjet.ShowDialog() == DialogResult.OK)
+            {
+               
+
+
+
+            }
+        }
     }
 }

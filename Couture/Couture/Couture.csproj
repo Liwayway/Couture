@@ -32,6 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.10.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Web, Version=6.10.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,17 +47,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConnexionBDD.cs" />
+    <Compile Include="frmAjoutProjet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAjoutProjet.Designer.cs">
+      <DependentUpon>frmAjoutProjet.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAjoutTissu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAjoutTissu.Designer.cs">
       <DependentUpon>frmAjoutTissu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAssocierTissuProjet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAssocierTissuProjet.Designer.cs">
+      <DependentUpon>frmAssocierTissuProjet.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmConsultationTissu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmConsultationTissu.Designer.cs">
       <DependentUpon>frmConsultationTissu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListeProjets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListeProjets.Designer.cs">
+      <DependentUpon>frmListeProjets.cs</DependentUpon>
     </Compile>
     <Compile Include="frmProjetParent.cs">
       <SubType>Form</SubType>
@@ -81,13 +102,24 @@
     <Compile Include="MDI.Designer.cs">
       <DependentUpon>MDI.cs</DependentUpon>
     </Compile>
+    <Compile Include="MTissu.cs" />
+    <Compile Include="Outils.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAjoutProjet.resx">
+      <DependentUpon>frmAjoutProjet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAjoutTissu.resx">
       <DependentUpon>frmAjoutTissu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAssocierTissuProjet.resx">
+      <DependentUpon>frmAssocierTissuProjet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmConsultationTissu.resx">
       <DependentUpon>frmConsultationTissu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListeProjets.resx">
+      <DependentUpon>frmListeProjets.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProjetParent.resx">
       <DependentUpon>frmProjetParent.cs</DependentUpon>

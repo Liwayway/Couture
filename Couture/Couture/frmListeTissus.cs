@@ -24,7 +24,7 @@ namespace Couture
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmTissuParent frmAjout = new frmTissuParent();
+            frmAjoutTissu frmAjout = new frmAjoutTissu();
             // si on sort de la saisie par OK
             if (frmAjout.ShowDialog() == DialogResult.OK)
             {
@@ -45,7 +45,7 @@ namespace Couture
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

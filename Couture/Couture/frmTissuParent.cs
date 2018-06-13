@@ -21,5 +21,20 @@ namespace Couture
         {
 
         }
+
+        private void lblLaize_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxLaize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxCategorie_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

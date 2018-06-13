@@ -34,9 +34,9 @@
             this.lblPhotoInstruction = new System.Windows.Forms.Label();
             this.rbtnTisse = new System.Windows.Forms.RadioButton();
             this.rbtnMaille = new System.Windows.Forms.RadioButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxLaize = new System.Windows.Forms.ComboBox();
             this.lblLaize = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtMetrage = new System.Windows.Forms.TextBox();
             this.lblMetrage = new System.Windows.Forms.Label();
             this.chkLave = new System.Windows.Forms.CheckBox();
             this.txtPrix = new System.Windows.Forms.TextBox();
@@ -52,15 +52,15 @@
             this.gbxCommentaire = new System.Windows.Forms.GroupBox();
             this.txtCommentaire = new System.Windows.Forms.TextBox();
             this.tbpAvancees = new System.Windows.Forms.TabPage();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbxMatierePrincipale = new System.Windows.Forms.ComboBox();
             this.lblMatiere = new System.Windows.Forms.Label();
             this.lblElasticite = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtElasticite = new System.Windows.Forms.TextBox();
             this.lblDensite = new System.Windows.Forms.Label();
             this.txtDensite = new System.Windows.Forms.TextBox();
             this.lblCategorie = new System.Windows.Forms.Label();
             this.lblMotif = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbxCategorie = new System.Windows.Forms.ComboBox();
             this.cbxMotif = new System.Windows.Forms.ComboBox();
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
@@ -86,9 +86,9 @@
             this.tbpPrincipal.Controls.Add(this.lblPhotoInstruction);
             this.tbpPrincipal.Controls.Add(this.rbtnTisse);
             this.tbpPrincipal.Controls.Add(this.rbtnMaille);
-            this.tbpPrincipal.Controls.Add(this.comboBox1);
+            this.tbpPrincipal.Controls.Add(this.cbxLaize);
             this.tbpPrincipal.Controls.Add(this.lblLaize);
-            this.tbpPrincipal.Controls.Add(this.textBox2);
+            this.tbpPrincipal.Controls.Add(this.txtMetrage);
             this.tbpPrincipal.Controls.Add(this.lblMetrage);
             this.tbpPrincipal.Controls.Add(this.chkLave);
             this.tbpPrincipal.Controls.Add(this.txtPrix);
@@ -142,13 +142,14 @@
             this.rbtnMaille.Text = "Maille (tricoté)";
             this.rbtnMaille.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbxLaize
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(258, 206);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 33;
+            this.cbxLaize.FormattingEnabled = true;
+            this.cbxLaize.Location = new System.Drawing.Point(258, 206);
+            this.cbxLaize.Name = "cbxLaize";
+            this.cbxLaize.Size = new System.Drawing.Size(121, 21);
+            this.cbxLaize.TabIndex = 33;
+            this.cbxLaize.SelectedIndexChanged += new System.EventHandler(this.cbxLaize_SelectedIndexChanged);
             // 
             // lblLaize
             // 
@@ -158,13 +159,14 @@
             this.lblLaize.Size = new System.Drawing.Size(38, 13);
             this.lblLaize.TabIndex = 32;
             this.lblLaize.Text = "Laize :";
+            this.lblLaize.Click += new System.EventHandler(this.lblLaize_Click);
             // 
-            // textBox2
+            // txtMetrage
             // 
-            this.textBox2.Location = new System.Drawing.Point(511, 170);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 31;
+            this.txtMetrage.Location = new System.Drawing.Point(511, 170);
+            this.txtMetrage.Name = "txtMetrage";
+            this.txtMetrage.Size = new System.Drawing.Size(100, 20);
+            this.txtMetrage.TabIndex = 31;
             // 
             // lblMetrage
             // 
@@ -289,15 +291,15 @@
             // 
             // tbpAvancees
             // 
-            this.tbpAvancees.Controls.Add(this.comboBox2);
+            this.tbpAvancees.Controls.Add(this.cbxMatierePrincipale);
             this.tbpAvancees.Controls.Add(this.lblMatiere);
             this.tbpAvancees.Controls.Add(this.lblElasticite);
-            this.tbpAvancees.Controls.Add(this.textBox3);
+            this.tbpAvancees.Controls.Add(this.txtElasticite);
             this.tbpAvancees.Controls.Add(this.lblDensite);
             this.tbpAvancees.Controls.Add(this.txtDensite);
             this.tbpAvancees.Controls.Add(this.lblCategorie);
             this.tbpAvancees.Controls.Add(this.lblMotif);
-            this.tbpAvancees.Controls.Add(this.comboBox3);
+            this.tbpAvancees.Controls.Add(this.cbxCategorie);
             this.tbpAvancees.Controls.Add(this.cbxMotif);
             this.tbpAvancees.Location = new System.Drawing.Point(4, 22);
             this.tbpAvancees.Name = "tbpAvancees";
@@ -307,13 +309,13 @@
             this.tbpAvancees.Text = "Propriétés avancées";
             this.tbpAvancees.UseVisualStyleBackColor = true;
             // 
-            // comboBox2
+            // cbxMatierePrincipale
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(129, 47);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 14;
+            this.cbxMatierePrincipale.FormattingEnabled = true;
+            this.cbxMatierePrincipale.Location = new System.Drawing.Point(129, 47);
+            this.cbxMatierePrincipale.Name = "cbxMatierePrincipale";
+            this.cbxMatierePrincipale.Size = new System.Drawing.Size(121, 21);
+            this.cbxMatierePrincipale.TabIndex = 14;
             // 
             // lblMatiere
             // 
@@ -333,12 +335,12 @@
             this.lblElasticite.TabIndex = 11;
             this.lblElasticite.Text = "Elasticité :";
             // 
-            // textBox3
+            // txtElasticite
             // 
-            this.textBox3.Location = new System.Drawing.Point(390, 47);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 12;
+            this.txtElasticite.Location = new System.Drawing.Point(390, 47);
+            this.txtElasticite.Name = "txtElasticite";
+            this.txtElasticite.Size = new System.Drawing.Size(100, 20);
+            this.txtElasticite.TabIndex = 12;
             // 
             // lblDensite
             // 
@@ -374,13 +376,14 @@
             this.lblMotif.TabIndex = 7;
             this.lblMotif.Text = "Motif : ";
             // 
-            // comboBox3
+            // cbxCategorie
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(129, 122);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 9;
+            this.cbxCategorie.FormattingEnabled = true;
+            this.cbxCategorie.Location = new System.Drawing.Point(129, 122);
+            this.cbxCategorie.Name = "cbxCategorie";
+            this.cbxCategorie.Size = new System.Drawing.Size(121, 21);
+            this.cbxCategorie.TabIndex = 9;
+            this.cbxCategorie.SelectedIndexChanged += new System.EventHandler(this.cbxCategorie_SelectedIndexChanged);
             // 
             // cbxMotif
             // 
@@ -440,9 +443,9 @@
         protected System.Windows.Forms.TabPage tbpAvancees;
         protected System.Windows.Forms.RadioButton rbtnTisse;
         protected System.Windows.Forms.RadioButton rbtnMaille;
-        protected System.Windows.Forms.ComboBox comboBox1;
+        protected System.Windows.Forms.ComboBox cbxLaize;
         protected System.Windows.Forms.Label lblLaize;
-        protected System.Windows.Forms.TextBox textBox2;
+        protected System.Windows.Forms.TextBox txtMetrage;
         protected System.Windows.Forms.Label lblMetrage;
         protected System.Windows.Forms.CheckBox chkLave;
         protected System.Windows.Forms.TextBox txtPrix;
@@ -455,18 +458,18 @@
         protected System.Windows.Forms.Label lblProvenance;
         protected System.Windows.Forms.TextBox txtNom;
         protected System.Windows.Forms.Label lblNom;
-        private System.Windows.Forms.ComboBox comboBox2;
         protected System.Windows.Forms.Label lblMatiere;
         protected System.Windows.Forms.Label lblElasticite;
-        protected System.Windows.Forms.TextBox textBox3;
+        protected System.Windows.Forms.TextBox txtElasticite;
         protected System.Windows.Forms.Label lblDensite;
         protected System.Windows.Forms.TextBox txtDensite;
         protected System.Windows.Forms.Label lblCategorie;
         protected System.Windows.Forms.Label lblMotif;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox cbxMotif;
         protected System.Windows.Forms.Button btnAnnuler;
         protected System.Windows.Forms.Button btnOK;
         protected System.Windows.Forms.Label lblPhotoInstruction;
+        protected System.Windows.Forms.ComboBox cbxMatierePrincipale;
+        protected System.Windows.Forms.ComboBox cbxCategorie;
+        protected System.Windows.Forms.ComboBox cbxMotif;
     }
 }
