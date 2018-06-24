@@ -29,22 +29,25 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListeTissus));
-            this.grdListeTissus = new System.Windows.Forms.DataGridView();
+            this.grdTissus = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txtRechercheTissu = new System.Windows.Forms.TextBox();
             this.btnAjouter = new System.Windows.Forms.Button();
             this.btnSupprimer = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.grdListeTissus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdTissus)).BeginInit();
             this.SuspendLayout();
             // 
-            // grdListeTissus
+            // grdTissus
             // 
-            this.grdListeTissus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdListeTissus.Location = new System.Drawing.Point(12, 99);
-            this.grdListeTissus.Name = "grdListeTissus";
-            this.grdListeTissus.Size = new System.Drawing.Size(665, 243);
-            this.grdListeTissus.TabIndex = 0;
+            this.grdTissus.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grdTissus.BackgroundColor = System.Drawing.Color.Teal;
+            this.grdTissus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdTissus.Location = new System.Drawing.Point(12, 99);
+            this.grdTissus.Name = "grdTissus";
+            this.grdTissus.ReadOnly = true;
+            this.grdTissus.Size = new System.Drawing.Size(665, 243);
+            this.grdTissus.TabIndex = 0;
             // 
             // label1
             // 
@@ -103,11 +106,12 @@
             this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.txtRechercheTissu);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.grdListeTissus);
+            this.Controls.Add(this.grdTissus);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListeTissus";
             this.Text = "Ma collection de tissus";
-            ((System.ComponentModel.ISupportInitialize)(this.grdListeTissus)).EndInit();
+            this.Load += new System.EventHandler(this.frmListeTissus_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.grdTissus)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,7 +119,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView grdListeTissus;
+        private System.Windows.Forms.DataGridView grdTissus;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtRechercheTissu;
         private System.Windows.Forms.Button btnAjouter;

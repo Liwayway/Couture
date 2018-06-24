@@ -7,6 +7,9 @@ using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using System.Collections;
 using System.Drawing;
+using System.Text.RegularExpressions;
+
+
 
 namespace Couture
 {
@@ -83,59 +86,73 @@ namespace Couture
         /// Permet de vérifier que l'utilisateur a soit saisi un text soit sélectionné un élément de la liste
         /// </summary>
         /// <param name=""></param>
-        public string CbxVoidControl(ComBoBox cbxATraiter)
+        public static Boolean CbxVoidControl(ComboBox cbxATraiter)
         {
-            string attributAAffecter;
-            while (cbxATraiter.SelectedIndex() == -1 || cbxATraiter.Text.ToTrim() == null)
+            Boolean code = true;
+            if (cbxATraiter.SelectedIndex== -1 && cbxATraiter.Text.Trim() == "")
             {
                 MessageBox.Show("Sélectionnez un élément de la liste ou saisissez une entrée");
                 cbxATraiter.BackColor = Color.Blue;
                 cbxATraiter.Focus();
-                attributAAffecter = null;
+                code = false;
                 
             }
 
-            if (cbxATraiter.Text.ToTrim() != null)
+            return code;
+
+        }
+
+        /// <summary>
+        /// Verifie qu'une valeur est bien numérique (int, float, d'une longueur arbitrairement fixée à 7 caracteres)
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        public static Boolean EstUneValeurNumerique(string s)
+        {
+
+            Boolean code = false; //Code retour; OK à priori
+
+            string pattern = @"^[0-9]+((\.|,)[0-9]+){0,1}$";
+            // On estime que la longueur max que l'utilisateur pourra entrer sera de 7 caractères (ex pour prix metrage : 9000,99
+            //Cela fait déjà assez cher le tissu, et on considère que le tissu peut être gratuit
+            if (s.Length < 8 && s.Length > 0)
             {
-                attributAAffecter = cbxATraiter.Text.ToTrim();
+
+                    //RegEx, vérifier que ce qui est saisi est bien soit un entier soit un nombre décimal
+                   if (Regex.IsMatch(s, pattern))
+                    {
+                        code = true;
+                    }
                 
+            }
+            return code;
+        }
+
+        /// <summary>
+        /// Attribue une valeur à la cbx (soit l'item selectionné, soit l'item saisi)
+        /// </summary>
+        /// <param name="cbxATraiter"></param>
+        /// <returns></returns>
+        public static string AttribuerValeurCbx(ComboBox cbxATraiter)
+        {
+            string attributAAffecter = null;
+            if (cbxATraiter.Text.Trim() != null)
+            {
+                attributAAffecter = cbxATraiter.Text.Trim();
+
 
             }
-            else if (cbxATraiter.SelectedIndex() > -1)
+            else if (cbxATraiter.SelectedIndex > -1)
             {
                 attributAAffecter = cbxATraiter.SelectedItem.ToString();
-                
+
 
             }
             return attributAAffecter;
-
         }
-        /*public static void ControleSaisieCombobox (ComboBox cbxAControler, string nomTable, string nomChamp)
-        {
-            for (int i = 0; i < cbxAControler.Items.Count; i++)
-            {
-                //string value = ;
 
-                if (cbxAControler.Text == cbxAControler.GetItemText(cbxAControler.Items[i]))
-                {
-                    MessageBox.Show("Cette" + nomChamp +"existe déjà dans la liste, veuillez la sélectionner.");
-                }
-                else if (cbxAControler.Text != cbxAControler.GetItemText(cbxAControler.Items[i]))
-                {
-                    //Appel de la méthode insertcouleur
-                    InsertCbxTextInto(nomTable, nomChamp, cbxAControler);
-                }
-            }
 
-        }*/
-
-        /*public static void InsertCbxTextInto (string nomTable, string nomChamp, ComboBox cbxConcerne)
-        {
-            MySqlCommand cmd = ConnexionBDD.GetConnexionBDD().CreateCommand();
-            cmd.CommandText = "INSERT IGNORE INTO " + nomTable + " (" + nomChamp + ") VALUES ("
-            + cbxConcerne.Text.ToString().ToLower() + ");";
-
-            cmd.ExecuteNonQuery();
-        }*/
+        
     }
 }
+

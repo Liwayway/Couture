@@ -17,7 +17,7 @@ namespace Couture
 
         private void btnAnnuler_Click(object sender, EventArgs e)
         {
-
+            this.DialogResult = DialogResult.Cancel;
         }
     }
 }

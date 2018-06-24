@@ -35,7 +35,7 @@
             this.gbxCommentaire.SuspendLayout();
             this.tbpPrincipal.SuspendLayout();
             this.tbpAvancees.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picTissu)).BeginInit();
             this.tbpListeProjets.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -47,13 +47,21 @@
             this.tbcAjoutTissu.Controls.SetChildIndex(this.tbpAvancees, 0);
             this.tbcAjoutTissu.Controls.SetChildIndex(this.tbpPrincipal, 0);
             // 
+            // txtCommentaire
+            // 
+            this.txtCommentaire.Size = new System.Drawing.Size(758, 183);
+            // 
+            // btnAnnuler
+            // 
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
+            // 
             // tbpListeProjets
             // 
             this.tbpListeProjets.Controls.Add(this.dataGridView1);
-            this.tbpListeProjets.Location = new System.Drawing.Point(4, 22);
+            this.tbpListeProjets.Location = new System.Drawing.Point(4, 24);
             this.tbpListeProjets.Name = "tbpListeProjets";
             this.tbpListeProjets.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpListeProjets.Size = new System.Drawing.Size(681, 459);
+            this.tbpListeProjets.Size = new System.Drawing.Size(795, 532);
             this.tbpListeProjets.TabIndex = 2;
             this.tbpListeProjets.Text = "Projets associés au tissu";
             this.tbpListeProjets.UseVisualStyleBackColor = true;
@@ -61,24 +69,24 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 23);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 27);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(669, 430);
+            this.dataGridView1.Size = new System.Drawing.Size(780, 496);
             this.dataGridView1.TabIndex = 0;
             // 
             // btnAjoutProjet
             // 
-            this.btnAjoutProjet.Location = new System.Drawing.Point(392, 503);
+            this.btnAjoutProjet.Location = new System.Drawing.Point(457, 580);
             this.btnAjoutProjet.Name = "btnAjoutProjet";
-            this.btnAjoutProjet.Size = new System.Drawing.Size(143, 23);
+            this.btnAjoutProjet.Size = new System.Drawing.Size(167, 27);
             this.btnAjoutProjet.TabIndex = 3;
             this.btnAjoutProjet.Text = "Ajouter un nouveau projet";
             this.btnAjoutProjet.UseVisualStyleBackColor = true;
             // 
             // frmConsultationTissu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(713, 538);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.ClientSize = new System.Drawing.Size(832, 621);
             this.Controls.Add(this.btnAjoutProjet);
             this.Name = "frmConsultationTissu";
             this.Text = "Détails du tissu";
@@ -93,7 +101,7 @@
             this.tbpPrincipal.PerformLayout();
             this.tbpAvancees.ResumeLayout(false);
             this.tbpAvancees.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picTissu)).EndInit();
             this.tbpListeProjets.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

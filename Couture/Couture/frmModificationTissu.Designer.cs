@@ -1,6 +1,6 @@
 ﻿namespace Couture
 {
-    partial class frmAjoutTissu
+    partial class frmModificationTissu
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -35,42 +35,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.picTissu)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtCommentaire
+            // tbpAvancees
             // 
-            this.txtCommentaire.Size = new System.Drawing.Size(758, 153);
+            this.tbpAvancees.BackColor = System.Drawing.Color.Transparent;
+            this.tbpAvancees.UseVisualStyleBackColor = false;
             // 
-            // tbpPrincipal
-            // 
-            this.tbpPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            // 
-            // txtMetrage
-            // 
-            this.txtMetrage.Location = new System.Drawing.Point(634, 192);
-            this.txtMetrage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMetrage_KeyPress);
-            // 
-            // txtPrix
-            // 
-            this.txtPrix.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrix_KeyPress);
-            // 
-            // picTissu
-            // 
-            this.picTissu.Click += new System.EventHandler(this.picTissu_Click);
-            // 
-            // btnAnnuler
-            // 
-            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
-            // 
-            // btnOK
-            // 
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
-            // frmAjoutTissu
+            // frmModificationTissu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.ClientSize = new System.Drawing.Size(832, 621);
-            this.Name = "frmAjoutTissu";
-            this.Text = " Ajouter un nouveau tissu";
-            this.Load += new System.EventHandler(this.frmAjoutTissu_Load);
+            this.ClientSize = new System.Drawing.Size(831, 621);
+            this.Name = "frmModificationTissu";
             this.tbcAjoutTissu.ResumeLayout(false);
             this.gbxCommentaire.ResumeLayout(false);
             this.gbxCommentaire.PerformLayout();

@@ -16,5 +16,10 @@ namespace Couture
         {
             InitializeComponent();
         }
+
+        private void btnAnnuler_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+        }
     }
 }

@@ -15,6 +15,7 @@ namespace Couture
         public frmListeTissus()
         {
             InitializeComponent();
+            this.afficheTissus();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -29,7 +30,8 @@ namespace Couture
             if (frmAjout.ShowDialog() == DialogResult.OK)
             {
                 // régénèrer l'affichage du dataGridView 
-                
+                this.afficheTissus();
+
             }
         }
 
@@ -46,6 +48,27 @@ namespace Couture
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmListeTissus_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// rétablit la source de données de la dataGridView
+        /// et rafraîchit son affichage
+        /// </summary>
+        private void afficheTissus()
+        {
+            // déterminer l'origine des données à afficher : 
+            // appel de la méthode de la classe MSection 
+            // qui alimente et retourne copie de sa 
+            // collection de stagiaires sous forme de datatable
+            this.grdTissus.DataSource = MTissu.getDonneesTissus();
+            // refraîchir l'affichage
+            this.grdTissus.Refresh();
+
         }
     }
 }

@@ -78,6 +78,12 @@
     <Compile Include="frmListeProjets.Designer.cs">
       <DependentUpon>frmListeProjets.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmModificationTissu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModificationTissu.Designer.cs">
+      <DependentUpon>frmModificationTissu.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProjetParent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmListeProjets.resx">
       <DependentUpon>frmListeProjets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModificationTissu.resx">
+      <DependentUpon>frmModificationTissu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProjetParent.resx">
       <DependentUpon>frmProjetParent.cs</DependentUpon>

@@ -8,16 +8,11 @@ using System.Windows.Forms;
 
 namespace Couture
 {
-    public partial class frmConsultationTissu : Couture.frmTissuParent
+    public partial class frmModificationTissu : Couture.frmTissuParent
     {
-        public frmConsultationTissu()
+        public frmModificationTissu()
         {
             InitializeComponent();
-        }
-
-        private void btnAnnuler_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.Cancel;
         }
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMDI));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.msMDI = new System.Windows.Forms.MenuStrip();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterUnTissuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterUnProjetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,20 +40,23 @@
             this.listeDesProjetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listeDesPatronsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.msMDI.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // msMDI
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.msMDI.BackColor = System.Drawing.Color.LightCyan;
+            this.msMDI.Font = new System.Drawing.Font("Script MT Bold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msMDI.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fichierToolStripMenuItem,
             this.affichageToolStripMenuItem,
             this.aProposToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(639, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.msMDI.Location = new System.Drawing.Point(0, 0);
+            this.msMDI.Name = "msMDI";
+            this.msMDI.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
+            this.msMDI.Size = new System.Drawing.Size(958, 26);
+            this.msMDI.TabIndex = 1;
+            this.msMDI.Text = "menuStrip1";
             // 
             // fichierToolStripMenuItem
             // 
@@ -62,34 +65,39 @@
             this.ajouterUnProjetToolStripMenuItem,
             this.ajouterUnTissuToolStripMenuItem1,
             this.consultationTissuToolStripMenuItem});
+            this.fichierToolStripMenuItem.Font = new System.Drawing.Font("Lucida Handwriting", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
-            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.fichierToolStripMenuItem.Text = "Fichier";
             // 
             // ajouterUnTissuToolStripMenuItem
             // 
+            this.ajouterUnTissuToolStripMenuItem.BackColor = System.Drawing.Color.LightCyan;
             this.ajouterUnTissuToolStripMenuItem.Name = "ajouterUnTissuToolStripMenuItem";
-            this.ajouterUnTissuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ajouterUnTissuToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.ajouterUnTissuToolStripMenuItem.Text = "Ajouter un tissu";
             this.ajouterUnTissuToolStripMenuItem.Click += new System.EventHandler(this.ajouterUnTissuToolStripMenuItem_Click);
             // 
             // ajouterUnProjetToolStripMenuItem
             // 
+            this.ajouterUnProjetToolStripMenuItem.BackColor = System.Drawing.Color.LightCyan;
             this.ajouterUnProjetToolStripMenuItem.Name = "ajouterUnProjetToolStripMenuItem";
-            this.ajouterUnProjetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ajouterUnProjetToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.ajouterUnProjetToolStripMenuItem.Text = "Ajouter un projet";
             this.ajouterUnProjetToolStripMenuItem.Click += new System.EventHandler(this.ajouterUnProjetToolStripMenuItem_Click);
             // 
             // ajouterUnTissuToolStripMenuItem1
             // 
+            this.ajouterUnTissuToolStripMenuItem1.BackColor = System.Drawing.Color.LightCyan;
             this.ajouterUnTissuToolStripMenuItem1.Name = "ajouterUnTissuToolStripMenuItem1";
-            this.ajouterUnTissuToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.ajouterUnTissuToolStripMenuItem1.Size = new System.Drawing.Size(201, 22);
             this.ajouterUnTissuToolStripMenuItem1.Text = "Ajouter un patron";
             // 
             // consultationTissuToolStripMenuItem
             // 
+            this.consultationTissuToolStripMenuItem.BackColor = System.Drawing.Color.LightCyan;
             this.consultationTissuToolStripMenuItem.Name = "consultationTissuToolStripMenuItem";
-            this.consultationTissuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultationTissuToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.consultationTissuToolStripMenuItem.Text = "Consultation Tissu";
             this.consultationTissuToolStripMenuItem.Click += new System.EventHandler(this.consultationTissuToolStripMenuItem_Click);
             // 
@@ -99,49 +107,61 @@
             this.listeDesTissusToolStripMenuItem,
             this.listeDesProjetsToolStripMenuItem,
             this.listeDesPatronsToolStripMenuItem});
+            this.affichageToolStripMenuItem.Font = new System.Drawing.Font("Lucida Handwriting", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.affichageToolStripMenuItem.Name = "affichageToolStripMenuItem";
-            this.affichageToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.affichageToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.affichageToolStripMenuItem.Text = "Affichage";
             // 
             // listeDesTissusToolStripMenuItem
             // 
+            this.listeDesTissusToolStripMenuItem.BackColor = System.Drawing.Color.LightCyan;
             this.listeDesTissusToolStripMenuItem.Name = "listeDesTissusToolStripMenuItem";
-            this.listeDesTissusToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.listeDesTissusToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.listeDesTissusToolStripMenuItem.Text = "Liste des tissus";
             this.listeDesTissusToolStripMenuItem.Click += new System.EventHandler(this.listeDesTissusToolStripMenuItem_Click);
             // 
             // listeDesProjetsToolStripMenuItem
             // 
+            this.listeDesProjetsToolStripMenuItem.BackColor = System.Drawing.Color.LightCyan;
             this.listeDesProjetsToolStripMenuItem.Name = "listeDesProjetsToolStripMenuItem";
-            this.listeDesProjetsToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.listeDesProjetsToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.listeDesProjetsToolStripMenuItem.Text = "Liste des projets";
             this.listeDesProjetsToolStripMenuItem.Click += new System.EventHandler(this.listeDesProjetsToolStripMenuItem_Click);
             // 
             // listeDesPatronsToolStripMenuItem
             // 
+            this.listeDesPatronsToolStripMenuItem.BackColor = System.Drawing.Color.LightCyan;
             this.listeDesPatronsToolStripMenuItem.Name = "listeDesPatronsToolStripMenuItem";
-            this.listeDesPatronsToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.listeDesPatronsToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.listeDesPatronsToolStripMenuItem.Text = "Liste des patrons";
             // 
             // aProposToolStripMenuItem
             // 
+            this.aProposToolStripMenuItem.Font = new System.Drawing.Font("Lucida Handwriting", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
-            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.aProposToolStripMenuItem.Text = "A propos";
             // 
             // frmMDI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 263);
-            this.Controls.Add(this.menuStrip1);
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.LightCyan;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(958, 384);
+            this.Controls.Add(this.msMDI);
+            this.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMDI";
-            this.Text = "Ecole Chiffon Dort";
+            this.Text = "Chiffon Dort";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMDI_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.msMDI.ResumeLayout(false);
+            this.msMDI.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,7 +169,7 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip msMDI;
         private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterUnTissuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem affichageToolStripMenuItem;

@@ -36,5 +36,25 @@ namespace Couture
         {
 
         }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxMatierePrincipale_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picTissu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxCouleur_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
