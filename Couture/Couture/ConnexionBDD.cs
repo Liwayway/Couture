@@ -21,7 +21,7 @@ namespace Couture
         {
 
             server = "localhost";
-            database = "coutureversion4";
+            database = "coutureversion5";
             uid = "root";
             password = "";
             string connectionString = "SERVER=" + server + ";" + "DATABASE=" +

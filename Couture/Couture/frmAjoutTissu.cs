@@ -267,7 +267,7 @@ namespace Couture
                 //On définit une variable qui stockera ce qui est retourné par la méthode insertInOtherTables (soit l'id du tissu inséré)
                
                 long idCouleur = 0;
-                long idMotif = 0; ;
+                long idMotif = 0; 
 
              
 

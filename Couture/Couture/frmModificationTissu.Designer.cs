@@ -1,6 +1,6 @@
 ﻿namespace Couture
 {
-    partial class frmModificationTissu
+    partial class frmConsultationModifTissu
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -40,11 +40,16 @@
             this.tbpAvancees.BackColor = System.Drawing.Color.Transparent;
             this.tbpAvancees.UseVisualStyleBackColor = false;
             // 
-            // frmModificationTissu
+            // btnAnnuler
+            // 
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
+            // 
+            // frmConsultationModifTissu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.ClientSize = new System.Drawing.Size(831, 621);
-            this.Name = "frmModificationTissu";
+            this.Name = "frmConsultationModifTissu";
+            this.Load += new System.EventHandler(this.frmConsultationModifTissu_Load);
             this.tbcAjoutTissu.ResumeLayout(false);
             this.gbxCommentaire.ResumeLayout(false);
             this.gbxCommentaire.PerformLayout();

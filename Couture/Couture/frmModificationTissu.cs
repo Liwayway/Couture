@@ -8,11 +8,32 @@ using System.Windows.Forms;
 
 namespace Couture
 {
-    public partial class frmModificationTissu : Couture.frmTissuParent
+    public partial class frmConsultationModifTissu : Couture.frmTissuParent
     {
-        public frmModificationTissu()
+
+        /// <summary>
+        /// le stagiaire à afficher / modifier
+        /// (on n'affecte pas directement sur le stagiaire fourni
+        /// et l'utilisateur pourra abandonner les saisies en cours par bouton Refaire)
+        /// </summary>
+        private MTissu leTissu;
+
+
+        public frmConsultationModifTissu(MTissu unTissu)
         {
             InitializeComponent();
+            this.leTissu = unTissu;
+        }
+
+        private void frmConsultationModifTissu_Load(object sender, EventArgs e)
+        {
+            
+          
+        }
+
+        private void btnAnnuler_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
         }
     }
 }
