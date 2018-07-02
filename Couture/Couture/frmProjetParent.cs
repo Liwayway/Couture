@@ -26,5 +26,15 @@ namespace Couture
         {
 
         }
+
+        private void lblNote_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbtHome_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

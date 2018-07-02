@@ -209,6 +209,7 @@ namespace Couture
 
         /// <summary>
         /// Créer un constructeur vide
+        /// Il sera utilisé notamment par la méthode getDonneesTissus
         /// </summary>
         public MTissu()
         {
@@ -289,13 +290,14 @@ namespace Couture
         }
 
         /// <summary>
-        /// Dans un premier temps, insère le motif saisi dans table motif
-        /// Puis recuperer l'id du motif
+        /// Insère le motif saisi dans table motif
+        /// Retourne l'id du motif qui vient d'être inséré pour le réutiliser dans une autre méthode
         /// </summary>
         /// <param name="leTissu"></param>
         /// <param name="dernierIdTissu"></param>
         public static long getInsertedIdMotif(MTissu leTissu)
         {
+            //On définit une variable permettant de stocker l'id du motif
             long idMotifInsere;
             MySqlCommand cmd = ConnexionBDD.GetConnexionBDD().CreateCommand();
             //On insère dans la table motif le motif inscrit par l'utilisateur;

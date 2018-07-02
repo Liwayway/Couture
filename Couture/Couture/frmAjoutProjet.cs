@@ -19,5 +19,18 @@ namespace Couture
         {
             this.DialogResult = DialogResult.Cancel;
         }
+
+        private void btnAjoutTissu_Click(object sender, EventArgs e)
+        {
+            frmAssocierTissuProjet frmAjout = new frmAssocierTissuProjet();
+            
+            // si on sort de la saisie par OK
+            if (frmAjout.ShowDialog() == DialogResult.OK)
+            {
+                // régénèrer l'affichage du dataGridView 
+                
+
+            }
+        }
     }
 }

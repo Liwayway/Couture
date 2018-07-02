@@ -42,7 +42,8 @@ namespace Couture
 
         private void listeDesProjetsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            frmListeProjets listeProjets = new frmListeProjets();
+            listeProjets.Show();
         }
 
         private void consultationTissuToolStripMenuItem_Click(object sender, EventArgs e)

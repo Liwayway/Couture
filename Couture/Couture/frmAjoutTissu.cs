@@ -192,7 +192,7 @@ namespace Couture
                 cbxLaize.Focus();
             }
 
-                //Controle qu'un item de la cbxCategorie ait bien été sélectionné
+            //Controle qu'un item de la cbxCategorie ait bien été sélectionné
 
             if (this.cbxCategorie.SelectedIndex == -1)
             {
@@ -212,7 +212,7 @@ namespace Couture
         {
             //Créer une référence d'objet MTissu
             MTissu nouveauTissu;
-            //Définir un code retourne
+            
 
             try
             {
@@ -264,18 +264,20 @@ namespace Couture
 
                 }
 
-                //On définit une variable qui stockera ce qui est retourné par la méthode insertInOtherTables (soit l'id du tissu inséré)
-               
+
+                //On définit ces variables qui stockeront les id qui seront réutilisés comme paramètres de la méthode
+                //insertTissu
                 long idCouleur = 0;
-                long idMotif = 0; 
+                long idMotif = 0;
 
-             
-
-                //Définir l'idMotif
-
-                if (this.cbxMotif.SelectedIndex == -1 && this.cbxMotif.Text.Trim() != null) // Si le motif a été saisi
+                //Définir l'idMotif selon si l'utilisateur saisit un nouveau motif
+                //Auquel cas ce motif s'il n'est pas existant dans la combobox sera ajouté
+                //Dans la table motif en BDD. L'id de cette insertion sera récupéré
+                // Si l'utilisateur sélectionne un motif dans la liste,
+                //On récupère directement cet id
+                if (this.cbxMotif.SelectedIndex == -1 && this.cbxMotif.Text.Trim() != "") // Si le motif a été saisi
                 {
-                    idMotif =  MTissu.getInsertedIdMotif(nouveauTissu);
+                    idMotif = MTissu.getInsertedIdMotif(nouveauTissu);
                 }
                 else if (this.cbxMotif.SelectedIndex > -1) //Si le motif a été sélectionné dans la liste
                 {
@@ -283,7 +285,7 @@ namespace Couture
                 }
 
                 //Choix d'appel de la méthode permettant de definir l'idCouleur utilisée dans insertTissu
-                if (this.cbxCouleur.SelectedIndex == -1 && this.cbxCouleur.Text.Trim() != null) //si la couleur a été saisie
+                if (this.cbxCouleur.SelectedIndex == -1 && this.cbxCouleur.Text.Trim() != "") //si la couleur a été saisie
                 {
                     idCouleur = MTissu.getInsertedIdCouleur(nouveauTissu);
                 }
@@ -296,13 +298,9 @@ namespace Couture
                 //Insère dans la table Tissu
                 MTissu.insertTissu(nouveauTissu, idCouleur, idMotif);
 
-
-
-
-
                 return true;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 nouveauTissu = null;
                 MessageBox.Show("Erreur : \n" + ex.Message, "Ajout de tissu");

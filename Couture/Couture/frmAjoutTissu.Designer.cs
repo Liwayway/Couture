@@ -43,9 +43,14 @@
             // 
             this.tbpPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             // 
+            // tbpAvancees
+            // 
+            this.tbpAvancees.Location = new System.Drawing.Point(4, 34);
+            this.tbpAvancees.Size = new System.Drawing.Size(795, 522);
+            // 
             // txtMetrage
             // 
-            this.txtMetrage.Location = new System.Drawing.Point(634, 192);
+            this.txtMetrage.Location = new System.Drawing.Point(664, 192);
             this.txtMetrage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMetrage_KeyPress);
             // 
             // txtPrix
@@ -55,6 +60,14 @@
             // picTissu
             // 
             this.picTissu.Click += new System.EventHandler(this.picTissu_Click);
+            // 
+            // txtElasticite
+            // 
+            this.txtElasticite.Location = new System.Drawing.Point(522, 54);
+            // 
+            // txtDensite
+            // 
+            this.txtDensite.Location = new System.Drawing.Point(522, 92);
             // 
             // btnAnnuler
             // 
