@@ -51,17 +51,31 @@
             // 
             this.txtCommentaire.Size = new System.Drawing.Size(758, 183);
             // 
+            // txtElasticite
+            // 
+            this.txtElasticite.Location = new System.Drawing.Point(522, 54);
+            // 
+            // txtDensite
+            // 
+            this.txtDensite.Location = new System.Drawing.Point(522, 97);
+            // 
             // btnAnnuler
             // 
             this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
+            // lblDensite
+            // 
+            this.lblDensite.BackColor = System.Drawing.Color.Transparent;
+            this.lblDensite.Size = new System.Drawing.Size(115, 18);
+            this.lblDensite.Click += new System.EventHandler(this.lblDensite_Click);
+            // 
             // tbpListeProjets
             // 
             this.tbpListeProjets.Controls.Add(this.dataGridView1);
-            this.tbpListeProjets.Location = new System.Drawing.Point(4, 24);
+            this.tbpListeProjets.Location = new System.Drawing.Point(4, 27);
             this.tbpListeProjets.Name = "tbpListeProjets";
             this.tbpListeProjets.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpListeProjets.Size = new System.Drawing.Size(795, 532);
+            this.tbpListeProjets.Size = new System.Drawing.Size(795, 529);
             this.tbpListeProjets.TabIndex = 2;
             this.tbpListeProjets.Text = "Projets associés au tissu";
             this.tbpListeProjets.UseVisualStyleBackColor = true;
@@ -76,9 +90,10 @@
             // 
             // btnAjoutProjet
             // 
-            this.btnAjoutProjet.Location = new System.Drawing.Point(457, 580);
+            this.btnAjoutProjet.Font = new System.Drawing.Font("Baar Sophia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAjoutProjet.Location = new System.Drawing.Point(426, 580);
             this.btnAjoutProjet.Name = "btnAjoutProjet";
-            this.btnAjoutProjet.Size = new System.Drawing.Size(167, 27);
+            this.btnAjoutProjet.Size = new System.Drawing.Size(198, 27);
             this.btnAjoutProjet.TabIndex = 3;
             this.btnAjoutProjet.Text = "Ajouter un nouveau projet";
             this.btnAjoutProjet.UseVisualStyleBackColor = true;
@@ -90,6 +105,7 @@
             this.Controls.Add(this.btnAjoutProjet);
             this.Name = "frmConsultationTissu";
             this.Text = "Détails du tissu";
+            this.Load += new System.EventHandler(this.frmConsultationTissu_Load);
             this.Controls.SetChildIndex(this.tbcAjoutTissu, 0);
             this.Controls.SetChildIndex(this.btnAnnuler, 0);
             this.Controls.SetChildIndex(this.btnOK, 0);

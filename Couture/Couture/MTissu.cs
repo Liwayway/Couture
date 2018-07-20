@@ -633,6 +633,10 @@ namespace Couture
             return dtTissus;
         }
 
+        /// <summary>
+        /// Suppression du tissu à partir de son identifiant
+        /// </summary>
+        /// <param name="id"></param>
         public static void DeleteTissu(long id)
         {
 
@@ -641,6 +645,137 @@ namespace Couture
             cmd.Parameters.AddWithValue("@idTissu", id);
             cmd.ExecuteNonQuery();
             ConnexionBDD.CloseConnection();
+        }
+
+
+        /// <summary>
+        /// Renvoit les données d'un tissu de la base de données
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        public static MTissu GetDonnneesTissuById(long Id)
+        {
+            //Déclaration des variables stockant les données des id lus par les datareader
+            long idFabric = 0;
+            long idLaize = 0;
+            long idCouleur = 0;
+            long idTechnique = 0;
+            long idFournisseur = 0;
+            long idMotif = 0;
+            long idMateriau = 0;
+
+
+            MTissu nouveauTissu = new MTissu();
+
+            MySqlCommand cmd = ConnexionBDD.GetConnexionBDD().CreateCommand();
+
+            //Verifier que ce tissu existe bien en BDD
+            cmd.CommandText = "SELECT COUNT(*) FROM tissu WHERE idTissu = @idTissu";
+            cmd.Parameters.AddWithValue("@idTissu", Id);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            reader.Read();
+            int result = reader.GetInt16(0);
+            reader.Close();
+
+            if (result == 0) //Pas de tissu existant
+            {
+                throw new Exception("Aucun tissu  pour l'idTissu " + Id.ToString());
+            }
+
+            cmd.CommandText = "SELECT * FROM tissu WHERE idTissu = @idTissu;";
+            MySqlDataReader readerTableTissu = cmd.ExecuteReader();
+
+
+
+            while (readerTableTissu.Read())
+            {
+
+
+                //Affecter les attributs du tissu contenu dans table tissu
+                idFabric = readerTableTissu.GetInt64(0);
+                nouveauTissu.NomTissu = readerTableTissu.GetString(1);
+                nouveauTissu.prixAchatTissu = readerTableTissu.GetFloat(2);
+                nouveauTissu.CommentaireTissu = readerTableTissu.GetString(3);
+                nouveauTissu.DecatiTissu = readerTableTissu.GetBoolean(4);
+                nouveauTissu.ElasticiteTissu = readerTableTissu.GetInt16(5);
+                nouveauTissu.DensiteTissu = readerTableTissu.GetInt16(6);
+                nouveauTissu.MetrageTissu = readerTableTissu.GetInt16(7);
+
+                //Récupérer les id des attributs dont les noms/labels sont situés dans les autres tables
+
+                idLaize = readerTableTissu.GetInt64(9);
+                idCouleur = readerTableTissu.GetInt64(8);
+                idTechnique = readerTableTissu.GetInt64(10);
+                idFournisseur = readerTableTissu.GetInt64(11);
+                idMotif = readerTableTissu.GetInt64(12);
+                idMateriau = readerTableTissu.GetInt64(13);
+                // affecter les données de l'objet MTissu :
+                // variables simples, ou propriétés ce qui déclenche alors
+                // le code des méthodes set
+                nouveauTissu.IdTissu = idFabric;
+                nouveauTissu.IdLaize = idLaize;
+                nouveauTissu.IdCouleur = idCouleur;
+                nouveauTissu.IdTechnique = idTechnique;
+                nouveauTissu.IdFournisseur = idFournisseur;
+                nouveauTissu.IdMotif = idMotif;
+                nouveauTissu.IdMateriau = idMateriau;
+
+
+            }
+            readerTableTissu.Close();
+
+            //Rechercher la largeurlaize et affecter l'attribut
+            cmd.CommandText = "SELECT largeurlaize FROM laize WHERE idLaize = @idLaize;";
+            cmd.Parameters.AddWithValue("@idLaize", nouveauTissu.IdLaize);
+            MySqlDataReader readerLaize = cmd.ExecuteReader();
+            readerLaize.Read();
+            nouveauTissu.Laize = readerLaize.GetInt16(0);
+            readerLaize.Close();
+
+
+            //Rechercher la couleur du tissu et affecter l'attribut couleur de l'objet nouveauTissu
+            cmd.CommandText = "SELECT nomCouleur FROM couleur WHERE idCouleur = @idCouleur;";
+            cmd.Parameters.AddWithValue("@idCouleur", nouveauTissu.IdCouleur);
+            MySqlDataReader readerCouleur = cmd.ExecuteReader();
+            readerCouleur.Read();
+            nouveauTissu.Couleur = readerCouleur.GetString(0);
+            readerCouleur.Close();
+
+            //Rechercher le motif du tissu 
+            cmd.CommandText = "SELECT lblMotif FROM motif WHERE idMotif = @idMotif;";
+            cmd.Parameters.AddWithValue("@idMotif", nouveauTissu.IdMotif);
+            MySqlDataReader readerMotif = cmd.ExecuteReader();
+            readerMotif.Read();
+            nouveauTissu.Motif = readerMotif.GetString(0);
+            readerMotif.Close();
+
+            //Rechercher la catégorie du tissu
+            cmd.CommandText = "SELECT lblCategorieTissu FROM categorietissus WHERE idTechnique = @idTechnique;";
+            cmd.Parameters.AddWithValue("@idTechnique", nouveauTissu.IdTechnique);
+            MySqlDataReader readerCategorie = cmd.ExecuteReader();
+            readerCategorie.Read();
+            nouveauTissu.CategorieTissu = readerCategorie.GetString(0);
+            readerCategorie.Close();
+
+            //Rechercher le nom du fournisseur
+            cmd.CommandText = "SELECT nomFournisseur FROM fournisseur WHERE idFournisseur = @idFournisseur;";
+            cmd.Parameters.AddWithValue("@idFournisseur", nouveauTissu.IdFournisseur);
+            MySqlDataReader readerFournisseur = cmd.ExecuteReader();
+            readerFournisseur.Read();
+            nouveauTissu.NomFournisseur = readerFournisseur.GetString(0);
+            readerFournisseur.Close();
+
+            //Rechercher le materiau
+            cmd.CommandText = "SELECT lblMateriau FROM materiau WHERE idMateriau = @idMateriau;";
+            cmd.Parameters.AddWithValue("@idMateriau", nouveauTissu.IdMateriau);
+            MySqlDataReader readerMateriau = cmd.ExecuteReader();
+            readerMateriau.Read();
+            nouveauTissu.MatierePremiere = readerMateriau.GetString(0);
+            readerMateriau.Close();
+
+            return nouveauTissu;
+
+
         }
 
 

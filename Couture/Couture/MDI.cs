@@ -48,8 +48,8 @@ namespace Couture
 
         private void consultationTissuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmConsultationTissu frmConsulter = new frmConsultationTissu();
-            frmConsulter.Show();
+            //frmConsultationTissu frmConsulter = new frmConsultationTissu();
+            //frmConsulter.Show();
         }
 
         private void frmMDI_Load(object sender, EventArgs e)

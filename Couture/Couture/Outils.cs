@@ -136,7 +136,7 @@ namespace Couture
         public static string AttribuerValeurCbx(ComboBox cbxATraiter)
         {
             string attributAAffecter = null;
-            if (cbxATraiter.Text.Trim() != null)
+            if (cbxATraiter.Text.Trim() != "")
             {
                 attributAAffecter = cbxATraiter.Text.Trim();
 

@@ -90,5 +90,59 @@ namespace Couture
             this.grdTissus.Refresh();
 
         }
+
+        private void grdTissus_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Double clic sur la datagrid :
+        /// Ouvrir la feuille détails
+        /// en y affichant le tissu correspondant à la ligne double-cliquée
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void grdTissus_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Ouvrir la feuille détail en y affichant 
+            //le stagiaire correspondant à la ligne double-cliquée
+
+            MTissu leTissu;
+            long idTissu = 0 ;
+
+            //Récupérer l'id du tissu cliqué en datagrid
+            //idTissu = (long)this.grdTissus.CurrentRow.Cells[0].Value;
+            if (e.RowIndex >=0)
+            {
+                DataGridViewRow row = this.grdTissus.Rows[e.RowIndex];
+                idTissu = (long)row.Cells[0].Value;
+
+            }
+
+
+
+            //Instancier un objet tissu pointant vers tissu
+            leTissu = MTissu.GetDonnneesTissuById(idTissu);
+
+            frmConsultationTissu frmConsultation = new frmConsultationTissu(leTissu);
+           
+            frmConsultation.ShowDialog();
+
+            //on rafraichit la datagrid
+            this.afficheTissus();
+        }
+
+        
+        private void grdTissus_DoubleClick(object sender, EventArgs e)
+        {
+            
+
+
+
+
+
+
+        }
     }
 }
